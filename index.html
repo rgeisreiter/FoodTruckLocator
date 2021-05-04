@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Food Truck Locator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Food Truck Locator</h1>
+      <div class="container">
+        <div class="flex-row align-center justify-center min-100-vh">
+          <div class="col-md-4 flex-column align-center p-5 bg-light">
+            <form id="search-form" class="form w-100">
+              <select id="format-input" class="form-input w-100">
+                <option value="" disabled selected>Select a Food Type</option>
+                <option value="mexican">Mexican</option>
+                <option value="american">American</option>
+                <option value="italian">Italian</option>
+                <option value="chinese">Chinese</option>
+                <option value="japanese">Japanese</option>
+                <option value="dessert">Dessert</option>
+              </select>
+              <button class="btn btn-info btn-block">Search!</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3 class="p-3">Recent Searches:</h3>
+          <ul>
+            <li id="search1">#</li>
+            <li id="search2">#</li>
+            <li id="search3">#</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
