@@ -16,11 +16,17 @@
 
 // Get yelp api data
 
-yelpRequestAPI = "https://api.jquery.com/jquery.getjson/ ";
-
-fetch(yelpRequestAPI).then(function (response) {
-  console.log(response.json());
-  return response.json();
+// AJAX call requires a third party library, jQuery
+$.ajax({
+  url: "https://api.yelp.com/v3/businesses/search",
+  headers: {
+    Authorization:
+      "Bearer WAqlcaCxGhgzhQglKDmrOu5U3uh4hVvgJUH3BM6_Gy2LYSifSi00jlueG91_X1LwcwvsnuO0gVvr6SxYAU3WRr_lpJWKzmiWaoh0CUAHnkL7M5nyLV7ehh_BwLWSYHYx",
+  },
+  method: "GET",
+}).then(function (response) {
+  console.log("Ajax Reponse \n-------------");
+  console.log(response);
 });
 
 // 1. declare url variable (add truck choice to search query)
