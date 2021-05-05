@@ -15,19 +15,38 @@
 // 2. fetch .then functions
 
 // Get yelp api data
+// fecth call to streetfood api
+// var truckData = {
+//   name = '',
+//   description = '',
+//   last ='',
+// }
+// var truckList= [truckData];
 
-// AJAX call requires a third party library, jQuery
-$.ajax({
-  url: "https://api.yelp.com/v3/businesses/search",
-  headers: {
-    Authorization:
-      "Bearer WAqlcaCxGhgzhQglKDmrOu5U3uh4hVvgJUH3BM6_Gy2LYSifSi00jlueG91_X1LwcwvsnuO0gVvr6SxYAU3WRr_lpJWKzmiWaoh0CUAHnkL7M5nyLV7ehh_BwLWSYHYx",
-  },
-  method: "GET",
-}).then(function (response) {
-  console.log("Ajax Reponse \n-------------");
-  console.log(response);
-});
+var result = [];
+fetch(
+  "https://cors-anywhere.herokuapp.com/http://data.streetfoodapp.com/1.1/vendors/"
+)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    var arr = Object.keys(data).map((key) => [key, data[key]]);
+    console.log(arr);
+    console.log(arr[0][1].name);
+    console.log(arr[0][1].description);
+
+    console.log(arr[0][1].last.display);
+  });
+
+// json2array(data);
+// function json2array(data) {
+//   var keys = Object.keys(data);
+//   keys.forEach(function (key) {
+//     result.push(data[key]);
+//   });
+//   console.log(result);
 
 // 1. declare url variable (add truck choice to search query)
 // 2. fetch .then functions
