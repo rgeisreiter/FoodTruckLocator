@@ -25,7 +25,7 @@
 
 var result = [];
 fetch(
-  "https://cors-anywhere.herokuapp.com/http://data.streetfoodapp.com/1.1/vendors/"
+  "https://cors-anywhere.herokuapp.com/http://data.streetfoodapp.com/1.1/regions/"
 )
   .then(function (response) {
     return response.json();
@@ -34,10 +34,9 @@ fetch(
     console.log(data);
     var arr = Object.keys(data).map((key) => [key, data[key]]);
     console.log(arr);
-    console.log(arr[0][1].name);
-    console.log(arr[0][1].description);
-
-    console.log(arr[0][1].last.display);
+    for (var i = 0; i < arr.length; i++) {
+      console.log(arr[i][1].name_long);
+    }
   });
 
 // json2array(data);
