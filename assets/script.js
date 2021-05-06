@@ -37,7 +37,7 @@ fetch(
     for (var i = 0; i < arr.length; i++) {
       if (arr[i][1].country == "us") {
         cities.push(arr[i][1].name);
-        $(".dropdown").append(cities);
+        $(".dropdown-content").append(cities);
       }
     }
   });
