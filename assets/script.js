@@ -35,17 +35,6 @@ fetch(
     var arr = Object.keys(data).map((key) => [key, data[key]]);
     console.log(arr);
     for (var i = 0; i < arr.length; i++) {
-      console.log(arr[i][1].name_long);
+      console.log(arr[i][1].name);
     }
   });
-
-// json2array(data);
-// function json2array(data) {
-//   var keys = Object.keys(data);
-//   keys.forEach(function (key) {
-//     result.push(data[key]);
-//   });
-//   console.log(result);
-
-// 1. declare url variable (add truck choice to search query)
-// 2. fetch .then functions
