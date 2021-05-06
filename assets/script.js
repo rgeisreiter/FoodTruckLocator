@@ -38,14 +38,3 @@ fetch(
       console.log(arr[i][1].name);
     }
   });
-
-// json2array(data);
-// function json2array(data) {
-//   var keys = Object.keys(data);
-//   keys.forEach(function (key) {
-//     result.push(data[key]);
-//   });
-//   console.log(result);
-
-// 1. declare url variable (add truck choice to search query)
-// 2. fetch .then functions
