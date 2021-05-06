@@ -1,9 +1,8 @@
-* {
+body {
   background-image: url(https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80);
-  opacity: 0.5;
+  opacity: 0.2;
   font-family: Helvetica, sans-serif;
   font-size: 20px;
-
 }
 
 .bg-image {
@@ -59,4 +58,16 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+.bg-image {
+  border: black 2px solid;
+}
+
+li {
+  width: 500;
+  height: 300;
+  margin: 10px;
+  border: blue 2px solid;
+  list-style: none;
 }
