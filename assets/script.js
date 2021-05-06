@@ -24,6 +24,7 @@
 // var truckList= [truckData];
 
 var result = [];
+var cities = [];
 fetch(
   "https://cors-anywhere.herokuapp.com/http://data.streetfoodapp.com/1.1/regions/"
 )
@@ -31,10 +32,34 @@ fetch(
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
     var arr = Object.keys(data).map((key) => [key, data[key]]);
-    console.log(arr);
+
     for (var i = 0; i < arr.length; i++) {
-      console.log(arr[i][1].name);
-    }
-  });
+// <<<<<<< cityArrayDropdown
+//       if (arr[i][1].country == "us") {
+//         cities.push(arr[i][1].name);
+//         $(".dropdown-content").append(cities);
+//       }
+//     }
+//   });
+// console.log(cities);
+
+// // var form = $("#cityDropdown");
+
+// // form.append(cityList);
+// // function appendList(listElement)
+// // json2array(data);
+// // function json2array(data) {
+// //   var keys = Object.keys(data);
+// //   keys.forEach(function (key) {
+// //     result.push(data[key]);
+// //   });
+// //   console.log(result);
+
+// // 1. declare url variable (add truck choice to search query)
+// // 2. fetch .then functions
+// =======
+//       console.log(arr[i][1].name);
+//     }
+//   });
+// >>>>>>> main
