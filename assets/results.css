@@ -1,21 +1,8 @@
-* {
-  background-image: url(https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8dGV4dHVyZWQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
-  font-family: Helvetica, sans-serif;
-  font-size: 20px;
-}
-h1 {
-  font-size: 100px;
-  color: rgb(20, 97, 97);
-  font-family: helvetica, sans-serif;
-}
-
-.mapcontainer {
-  display: flex;
-  justify-content: center;
-}
-
-#map {
-  border: black 2px solid;
+.bg-image {
+  height: 1000px;
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Dropdown Button */
