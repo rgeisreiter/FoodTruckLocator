@@ -1,0 +1,24 @@
+.card-body {
+  border: 2px solid blue;
+  background-color: bisque;
+  color: black;
+  margin: 10px;
+  width: 600px;
+}
+
+.no-results {
+  display: block;
+  text-align: center;
+  align-content: center;
+  color: black;
+  margin: 0 auto;
+}
+
+.truck-logo {
+  width: 100px;
+  height: 82px;
+}
+
+.truck-description {
+  font-style: italic;
+}
