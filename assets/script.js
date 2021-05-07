@@ -42,6 +42,8 @@ var submitEl = document.getElementById("submit");
 submitEl.addEventListener("click", function () {
   var input = document.getElementById("dropdown").value;
   console.log(input);
+  var searchHTML = "./results.html?q=" + input;
+  location.assign(searchHTML);
 });
 
 >>>>>>> 227c3d406800bf9548c3f1fcd29957641d9b6625

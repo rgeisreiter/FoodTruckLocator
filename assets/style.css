@@ -75,3 +75,11 @@ footer {
 p {
   font-size: 80%;
 }
+
+.card-body {
+  border: 2px solid blue;
+  background-color: bisque;
+  color: black;
+  margin: 10px;
+  width: 600px;
+}
