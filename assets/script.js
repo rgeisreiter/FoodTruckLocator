@@ -1,6 +1,3 @@
-
-
-
 var cities = [];
 
 fetch(
@@ -36,3 +33,6 @@ submitEl.addEventListener("click", function () {
   console.log(input);
 });
 
+var queryHTML = "./results.html?q=" + input;
+
+location.assign(queryHTML);
