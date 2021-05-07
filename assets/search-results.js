@@ -22,10 +22,31 @@ function displaySearchResults(trucksObject) {
   var truckAddress = document.createElement("p");
   truckAddress.innerHTML = "Address: " + trucksObject.last.display + "<br/>";
 
-  var truckURL = document.createElement("p");
-  truckURL.innerHTML = "URL: " + trucksObject.url + "<br/>";
+  var truckEmail = document.createElement("a");
+  truckEmail.href = "mailto:" + trucksObject.email;
+  truckEmail.innerHTML = "email: " + trucksObject.email + "<br/>";
 
-  cardBody.append(cardTitle, truckDescription, truckAddress, truckURL);
+  var truckPhone = document.createElement("p");
+  truckPhone.innerHTML = "Phone: " + trucksObject.phone + "<br/>";
+
+  if (trucksObject.images) {
+    var truckLogo = document.createElement("img");
+    truckLogo.src = trucksObject.images.logo;
+  }
+
+  var truckURL = document.createElement("a");
+  truckURL.href = "http://" + trucksObject.url;
+  truckURL.innerHTML = trucksObject.url + "<br/>";
+
+  cardBody.append(
+    cardTitle,
+    truckDescription,
+    truckAddress,
+    truckEmail,
+    truckPhone,
+    truckLogo,
+    truckURL
+  );
   resultsEl = document.getElementById("results");
   resultsEl.append(cardBody);
 }

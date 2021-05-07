@@ -26,18 +26,6 @@ fetch(
     }
   });
 
-
-<<<<<<< HEAD
-for(var i = 0; i < options.length; i++) {
-    var opt = options[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.appendChild(el);
-}​
-
-console.log("When you run the site for the first time, there is potential for an error. If you receive this error, click on the button to request access and you will be let in. The problem will not occur again.")
-=======
 var submitEl = document.getElementById("submit");
 submitEl.addEventListener("click", function () {
   var input = document.getElementById("dropdown").value;
@@ -45,5 +33,3 @@ submitEl.addEventListener("click", function () {
   var searchHTML = "./results.html?q=" + input;
   location.assign(searchHTML);
 });
-
->>>>>>> 227c3d406800bf9548c3f1fcd29957641d9b6625
