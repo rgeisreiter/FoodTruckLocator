@@ -26,10 +26,8 @@ fetch(
     }
   });
 
-
 var submitEl = document.getElementById("submit");
 submitEl.addEventListener("click", function () {
   var input = document.getElementById("dropdown").value;
   console.log(input);
 });
-
