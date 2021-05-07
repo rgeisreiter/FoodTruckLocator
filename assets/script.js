@@ -31,4 +31,4 @@ for(var i = 0; i < options.length; i++) {
     select.appendChild(el);
 }​
 
-console.log("When you run the site for the first time, there is potential for an error. If you receive this error, click on the button to request access and you will be let in.")
+console.log("When you run the site for the first time, there is potential for an error. If you receive this error, click on the button to request access and you will be let in. The problem will not occur again")

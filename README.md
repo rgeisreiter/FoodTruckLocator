@@ -16,7 +16,7 @@ The installation simply requires opening a webpage.
 
 When the user visits the site, they are presented with an option to select their city of choice. Upon doing so, they are redirected to another page where their results will be displayed along with a map.
 
-When you run the site for the first time, there is potential for an error. If you receive this error, click on the button to request access and you will be let in.
+When you run the site for the first time, there is potential for an error. If you receive this error, click on the button to request access and you will be let in. The problem will not occur again
 
 ## Credits
 
