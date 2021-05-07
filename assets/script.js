@@ -13,6 +13,7 @@ fetch(
     for (var i = 0; i < arr.length; i++) {
       var city = arr[i][1].name;
       var country = arr[i][1].country;
+      // var valid = arr[i][1].ios_app_url;
       if (country == "us") {
         cities.push(city);
       }
