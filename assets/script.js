@@ -1,6 +1,3 @@
-
-
-
 var cities = [];
 
 fetch(
@@ -20,8 +17,7 @@ fetch(
         cities.push(city);
       }
     }
-    console.log("Cities array---------");
-    console.log(cities[0]);
+
     for (var i = 0; i < cities.length; i++) {
       var selectEl = document.getElementById("dropdown");
       var option = document.createElement("option");
@@ -35,4 +31,3 @@ submitEl.addEventListener("click", function () {
   var input = document.getElementById("dropdown").value;
   console.log(input);
 });
-
