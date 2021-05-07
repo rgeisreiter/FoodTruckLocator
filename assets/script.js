@@ -30,3 +30,5 @@ for(var i = 0; i < options.length; i++) {
     el.value = opt;
     select.appendChild(el);
 }​
+
+console.log("When you run the site for the first time, there is potential for an error. If you receive this error, click on the button to request access and you will be let in.")
