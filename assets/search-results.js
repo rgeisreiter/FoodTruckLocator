@@ -1,12 +1,17 @@
-$(document).ready(function () {
-  $("#myModal").modal("hide");
-});
+// $(document).ready(function () {
+//   $("#myModal").modal("hide");
+// });
 
 var citySearched = document.location.search.split("=")[1];
 var searchQuery = citySearched.toLowerCase();
 console.log(searchQuery);
 
 // Get search results from API
+
+function mapIt(lat, long, name) {
+  document.location =
+    "./map.html?long=" + long + "&lat=" + lat + "&name=" + name;
+}
 
 function displaySearchResults(trucksObject) {
   console.log(trucksObject.name);
@@ -59,14 +64,10 @@ function displaySearchResults(trucksObject) {
     truckURL.innerHTML = "<br/> http://" + trucksObject.url + "<br/>";
   }
 
-  var truckMap = document.createElement("button");
-  truckMap.classList.add("map-button", "btn");
-  truckMap.setAttribute("data-toggle", "modal");
-  truckMap.setAttribute("data-target", "#mapModal");
-  truckMap.setAttribute("id", trucksObject.name);
-  truckMap.innerHTML = "Map it!";
-
-  // <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+  var mapButton = document.createElement("button");
+  mapButton.classList.add("map-button", "btn");
+  mapButton.setAttribute("id", trucksObject.name);
+  mapButton.innerHTML = "Map it!";
 
   cardBody.append(
     cardTitle,
@@ -76,10 +77,20 @@ function displaySearchResults(trucksObject) {
     truckPhone,
     truckLogo,
     truckURL,
-    truckMap
+    mapButton
   );
+
   var resultsEl = document.getElementById("results");
   resultsEl.append(cardBody);
+
+  var lat = trucksObject.last.latitude;
+  var long = trucksObject.last.longitude;
+  // Add event listener
+
+  mapButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    mapIt(lat, long, trucksObject.name);
+  });
 }
 
 // Check if API page exists
