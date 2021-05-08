@@ -27,10 +27,19 @@ fetch(
     }
   });
 
+var citiesDropdown = [];
+if (JSON.parse(localStorage.getItem("citySearch"))) {
+  citiesDropdown = JSON.parse(localStorage.getItem("citySearch"));
+}
 var submitEl = document.getElementById("submit");
 submitEl.addEventListener("click", function () {
   var input = document.getElementById("dropdown").value;
   console.log(input);
   var searchHTML = "./results.html?q=" + input;
+  console.log(citiesDropdown.indexOf(input));
+  if (citiesDropdown.indexOf(input) === -1) {
+    citiesDropdown.push(input);
+    localStorage.setItem("citySearch", JSON.stringify(citiesDropdown));
+  }
   location.assign(searchHTML);
 });
