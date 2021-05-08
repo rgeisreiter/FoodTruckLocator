@@ -1,9 +1,25 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 2px solid blue;
-  background-color: bisque;
+  background-image: url(./Img/nick-hillier-ozKgHSxluxQ-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: black;
   margin: 10px;
-  width: 600px;
+  padding: 10px;
+  width: 100%;
 }
 
 .no-results {
@@ -20,5 +36,24 @@
 }
 
 .truck-description {
+  padding: 20px;
   font-style: italic;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button {
+  margin: 10px;
+  width: 100px;
+  background-color: aquamarine;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+img {
+  margin: 10px;
+  margin-top: 20px;
 }

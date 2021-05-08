@@ -1,3 +1,7 @@
+$(document).ready(function () {
+  $("#myModal").modal("hide");
+});
+
 var citySearched = document.location.search.split("=")[1];
 var searchQuery = citySearched.toLowerCase();
 console.log(searchQuery);
@@ -7,7 +11,7 @@ console.log(searchQuery);
 function displaySearchResults(trucksObject) {
   console.log(trucksObject.name);
   var truckCard = document.createElement("div");
-  truckCard.classList.add("card", "bg-light", "text-dark", "mb-3", "p-3");
+  truckCard.classList.add("card");
 
   var cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
@@ -27,8 +31,7 @@ function displaySearchResults(trucksObject) {
   if (trucksObject.last.display) {
     var truckAddress = document.createElement("p");
     truckAddress.classList.add("truck-address");
-    truckAddress.innerHTML =
-      "Located at: <br/>" + trucksObject.last.display + "<br/>";
+    truckAddress.innerHTML = trucksObject.last.display + "<br/>";
   }
 
   if (trucksObject.email) {
@@ -57,9 +60,13 @@ function displaySearchResults(trucksObject) {
   }
 
   var truckMap = document.createElement("button");
-  truckMap.classList.add("map-button");
-  truckMap.setAttribute("id", "mapit");
+  truckMap.classList.add("map-button", "btn");
+  truckMap.setAttribute("data-toggle", "modal");
+  truckMap.setAttribute("data-target", "#mapModal");
+  truckMap.setAttribute("id", trucksObject.name);
   truckMap.innerHTML = "Map it!";
+
+  // <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
   cardBody.append(
     cardTitle,
