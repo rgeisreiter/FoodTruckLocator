@@ -1,4 +1,6 @@
 var cities = [];
+var arrayCity =[];
+var search = document.querySelector (".searchHistory");
 
 fetch(
   "https://cors-anywhere.herokuapp.com/http://data.streetfoodapp.com/1.1/regions/"
@@ -42,4 +44,18 @@ submitEl.addEventListener("click", function () {
     localStorage.setItem("citySearch", JSON.stringify(citiesDropdown));
   }
   location.assign(searchHTML);
+
+  localStorage.setItem ("arrayCity", JSON.stringify(arrayCity));
+  arrayCity.push(input);
+   console.log (arrayCity);
+   JSON.parse(localStorage.getItem("arrayCity"));
+for (var i =0; i < arrayCity.length; i++) {
+  var city =arrayCity [i];
+  var li = document.createElement("li");
+  li.textContent =city;
+  li.setAttribute("data-index", i);
+  search.appendChild(li);
+}
+
 });
+
