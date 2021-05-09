@@ -42,12 +42,12 @@ function displaySearchResults(trucksObject) {
   if (trucksObject.email) {
     var truckEmail = document.createElement("a");
     truckEmail.href = "mailto:" + trucksObject.email;
-    truckEmail.innerHTML = "m: " + trucksObject.email + "<br/>";
+    truckEmail.innerHTML = trucksObject.email + "<br/>";
   }
 
   if (trucksObject.phone) {
     var truckPhone = document.createElement("p");
-    truckPhone.innerHTML = "p: " + trucksObject.phone + "<br/>";
+    truckPhone.innerHTML = trucksObject.phone + "<br/>";
   }
 
   var truckLogo = document.createElement("img");
@@ -61,7 +61,7 @@ function displaySearchResults(trucksObject) {
   if (trucksObject.url) {
     var truckURL = document.createElement("a");
     truckURL.href = "http://" + trucksObject.url;
-    truckURL.innerHTML = "<br/> http://" + trucksObject.url + "<br/>";
+    truckURL.innerHTML = "<br/>" + trucksObject.url + "<br/>";
   }
 
   var mapButton = document.createElement("button");
