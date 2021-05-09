@@ -33,7 +33,7 @@ if (JSON.parse(localStorage.getItem("arrayCity"))) {
   arrayCity = JSON.parse(localStorage.getItem("arrayCity"));
 }
 var submitEl = document.getElementById("submit");
-submitEl.addEventListener("click", function () {
+submitEl.addEventListener("click", function (e) {
   var input = document.getElementById("dropdown").value;
   console.log(input);
   var searchHTML = "./results.html?q=" + input;
@@ -44,12 +44,12 @@ submitEl.addEventListener("click", function () {
   }
 
   location.assign(searchHTML);
-
-  for (var i = 0; i < arrayCity.length; i++) {
-    var city = arrayCity[i];
-    var li = document.createElement("li");
-    li.textContent = city;
-    li.setAttribute("data-index", i);
-    search.appendChild(li);
-  }
 });
+
+for (var i = 0; i < arrayCity.length; i++) {
+  var city = arrayCity[i];
+  var li = document.createElement("li");
+  li.textContent = city;
+  li.setAttribute("data-index", i);
+  search.appendChild(li);
+}
