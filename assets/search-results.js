@@ -55,7 +55,7 @@ function displaySearchResults(trucksObject) {
   if (trucksObject.images) {
     truckLogo.src = trucksObject.images.logo;
   } else {
-    truckLogo.src = "./assets/img/FoodTruckIcon.png";
+    truckLogo.src = "./assets/Img/FoodTruckIcon.png";
   }
 
   if (trucksObject.url) {
