@@ -19,10 +19,10 @@ The installation simply requires opening a webpage.
 
    https://rgeisreiter.github.io/FoodTruckLocator/
 
-    ![](./assets/images/landing.JPG)
+    <a href='https://www.linkpicture.com/view.php?img=LPic60988b940db2b1637486874'><img src='https://www.linkpicture.com/q/landing.jpg' type='image'></a>
 
 
-    ![](./assets/images/results.JPG)
+    <a href='https://www.linkpicture.com/view.php?img=LPic60988bb7f0d6e583077081'><img src='https://www.linkpicture.com/q/results_2.jpg' type='image'></a>
 
 When the user visits the site, they are presented with an option to select their city of choice. Upon doing so, they are redirected to another page where a food truck list for the selected city will be displayed along with the option display the location of the food truck in a map.
 
