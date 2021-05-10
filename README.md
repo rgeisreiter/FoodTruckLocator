@@ -10,9 +10,12 @@ The installation simply requires opening a webpage.
 
 ## Usage
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+https://rgeisreiter.github.io/FoodTruckLocator/
+
+    ![](assets/images/landing.JPG)
+
+
+    ![](assets/images/results.JPG)
 
 When the user visits the site, they are presented with an option to select their city of choice. Upon doing so, they are redirected to another page where their results will be displayed along with a map.
 
